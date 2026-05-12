@@ -77,7 +77,6 @@ function renderProducts(list){
   productsContainer.innerHTML = "";
 
   list.forEach(product => {
-
     productsContainer.innerHTML += `
       <div class="product">
         <img src="${product.img}" alt="${product.name}">
@@ -89,15 +88,12 @@ function renderProducts(list){
             <button class="add">Добавить</button>
           </div>
         </div>
-      </div>
-    `;
-
+      </div>`;
   });
 
   activateButtons();
 
 }
-
 activateButtons();
 updateCartCount();
 
@@ -106,7 +102,6 @@ if(search){
   search.addEventListener("input", () => {
 
     const value = search.value.toLowerCase().trim();
-
     if(value === ""){
       productsContainer.innerHTML = defaultProducts;
       activateButtons();
@@ -125,17 +120,8 @@ if(search){
 }
 
 const loader = document.querySelector(".loader");
-
-window.addEventListener("load",()=>{
-
-if(loader){
-
-setTimeout(()=>{
-
-loader.classList.add("hide");
-
-},1500);
-
-}
-
+  window.addEventListener("load",()=>{
+    if(loader){
+      setTimeout(()=>{loader.classList.add("hide");},1500);
+      }
 });
