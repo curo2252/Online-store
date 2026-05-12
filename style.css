@@ -30,10 +30,10 @@ header{
   width:100%;
   margin:auto;
   padding:18px 22px;
-  display:flex;
+  display:grid;
+  grid-template-columns:auto auto 1fr auto;
   align-items:center;
-  justify-content:center;
-  gap:20px;
+  gap:28px;
 }
 
 .logo{
@@ -41,6 +41,28 @@ header{
   font-weight:900;
   color:#fff;
   white-space:nowrap;
+}
+
+.menu{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.menu a{
+display:inline-block;
+
+text-decoration:none;
+color:#ffffff;
+font-weight:600;
+transition:.25s;
+position:relative;
+top:2px;
+font-size:21px;
+}
+
+.menu a:hover{
+color:#8B5CF6;
 }
 
 .logo span,
@@ -53,7 +75,8 @@ header{
   display:flex;
   align-items:center;
   gap:8px;
-  margin:auto;
+  justify-self:center;
+  margin:0;
 }
 
 .search-icon{
@@ -91,8 +114,16 @@ header{
   font-weight:700;
   margin-left:auto;
   text-decoration:none;
-  display:inline-block;
+  display:flex;
+  align-items: center;
+  gap: 1px;
   transition:.25s;
+}
+
+.cart-icon{
+width:22px;
+height:22px;
+object-fit:contain;
 }
 
 .cart:hover,
@@ -216,9 +247,10 @@ section{
   text-decoration:none;
 }
 
-.emoji{
-  font-size:34px;
-  margin-bottom:8px;
+.category-icon{
+width:40px;
+height:40px;
+object-fit:contain;
 }
 
 .category strong,
@@ -415,7 +447,8 @@ footer{
   padding:0 22px 40px;
   display:flex;
   justify-content:space-between;
-  gap:40px;
+  align-items:flex-start;
+  gap:60px;
   flex-wrap:wrap;
 }
 
@@ -436,6 +469,28 @@ footer{
   color:#6B7280;
   font-size:14px;
   background:rgba(0,0,0,.15);
+}
+
+.footer-menu{
+display:flex;
+align-items:center;
+gap:28px;
+margin-top:18px;
+flex-wrap:wrap;
+}
+
+.footer-menu a{
+display:inline-block;
+text-decoration:none;
+color:#D5D9E3;
+font-weight:600;
+font-size:17px;
+transition:.25s;
+}
+
+.footer-menu a:hover{
+color:#8B5CF6;
+transform:translateY(-3px);
 }
 
 @media(max-width:760px){
@@ -543,5 +598,55 @@ footer{
 
   .price{
     font-size:20px;
+  }
+}
+
+.loader{
+  position:fixed;
+  inset:0;
+  background:#0B1020;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+
+  opacity:1;
+  transition:opacity .9s ease;
+}
+
+.loader.hide{
+  opacity:0;
+  pointer-events:none;
+}
+
+.loader h1{
+  font-size:48px;
+  color:#fff;
+
+  opacity:0;
+  transform:translateY(-40px);
+
+  animation:logoShow 1s ease forwards;
+}
+
+.loader.hide h1{
+  animation:none;
+  opacity:0;
+  transition:opacity .3s ease;
+}
+
+.loader span{
+  color:#8B5CF6;
+}
+
+@keyframes logoShow{
+  from{
+    opacity:0;
+    transform:translateY(-40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 }

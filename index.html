@@ -8,19 +8,38 @@
 </head>
 <body>
 
+<div class="loader">
+  <h1>Saturn<span>Market</span></h1>
+</div>
+
 <header>
   <div class="nav">
     <div class="logo">Saturn<span>Market</span></div>
+
+    <nav class="menu">
+
+       <a href="#home">Главная</a>
+       <a href="#categories">Категории</a>
+       <a href="#products">Скидки</a>
+
+    </nav>
+
     <div class="search-wrapper">
       <div class="search-icon">⌕</div>
       <input class="search" type="text" placeholder="Поиск продуктов...">
     </div>
-    <a href="cart.html" class="cart">Корзина</a>
+     <a href="cart.html" class="cart">
+
+       <img src="icons/cart.png" class="cart-icon">
+
+       <span>· 0</span>
+
+     </a>
   </div>
 </header>
 
 <main>
-  <div class="hero">
+  <div class="hero" id="home">
     <div class="hero-content">
       <h1>Saturn<span>Market</span></h1>
       <p>онлайн информационная система продуктового магазина</p>
@@ -28,16 +47,16 @@
     </div>
   </div>
 
-  <section>
+<section id="categories">
     <div class="section-head"><h2>Категории товаров</h2></div>
-    <div class="categories">
-     <a href="fruits.html" class="category"><div class="emoji">🍎</div><strong>Фрукты</strong></a>
-     <a href="vegetables.html" class="category"><div class="emoji">🥦</div><strong>Овощи</strong></a>
-     <a href="milk.html" class="category"><div class="emoji">🥛</div><strong>Молочные</strong></a>
-     <a href="meat.html" class="category"><div class="emoji">🥩</div><strong>Мясо</strong></a>
-     <a href="bakery.html" class="category"><div class="emoji">🍞</div><strong>Выпечка</strong></a>
-     <a href="drinks.html" class="category"><div class="emoji">🥤</div><strong>Напитки</strong></a>
-    </div>
+      <div class="categories">
+        <a href="fruits.html" class="category"><div class="emoji"><img src="icons/apple.png" class="category-icon"></div><strong>Фрукты</strong></a>
+        <a href="vegetables.html" class="category"><div class="emoji"><img src="icons/vegetables.png" class="category-icon"></div><strong>Овощи</strong></a>
+        <a href="milk.html" class="category"><div class="emoji"><img src="icons/milk.png" class="category-icon"></div><strong>Молочные</strong></a>
+        <a href="meat.html" class="category"><div class="emoji"><img src="icons/meat.png" class="category-icon"><img src="icons/i.png" class="category-icon"><img src="icons/fish.png" class="category-icon"></div><strong>Мясо и Рыба</strong></a>
+        <a href="bakery.html" class="category"><div class="emoji"><img src="icons/bakery.png" class="category-icon"></div><strong>Выпечка</strong></a>
+        <a href="drinks.html" class="category"><div class="emoji"><img src="icons/drinks.png" class="category-icon"></div><strong>Напитки</strong></a>
+      </div>
   </section>
 
   <section id="products">
@@ -84,7 +103,18 @@
   <div class="footer-container">
     <div class="footer-info">
       <h2 class="footer-logo">Saturn<span>Market</span></h2>
-      <p>Онлайн информационная система современного продуктового магазина</p>
+      <p>Онлайн информационная система современного продуктового магазина
+
+
+      </p>
+        
+      <div class="footer-menu">
+            <a href="#home">Главная</a>
+            <a href="#categories">Категории</a>
+            <a href="#products">Скидки</a>
+            <a href="cart.html">Корзина</a>
+         </div>
+
     </div>
     <div class="footer-block">
       <h3>Контакты</h3>
@@ -96,7 +126,12 @@
   <div class="footer-bottom">© 2026 Saturn Market</div>
 </footer>
 
+<script src="products.js"></script>
 <script src="script.js"></script>
+
 </body>
+
+
+
 </html>
 
