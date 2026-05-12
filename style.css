@@ -500,10 +500,12 @@ transform:translateY(-3px);
 @media(max-width:760px){
 
   .nav{
-    flex-direction:column;
-    align-items:stretch;
-    gap:14px;
-  }
+  display:grid;
+  grid-template-columns:1fr;
+  justify-items:center;
+  gap:14px;
+  padding:18px;
+}
 
   .logo,
   .cart{
